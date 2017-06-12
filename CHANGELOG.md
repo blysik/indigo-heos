@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - TBD
 
 ### Fixed
-- TBD
+- README.md: url for tags list
 
 ### Removed
 - TBD

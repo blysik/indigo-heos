@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - TBD
 
-## [0.0.1] - 2017-??-??
+## [0.0.1] - 2017-06-12
 ### Added
 - Initial version
 

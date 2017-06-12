@@ -20,7 +20,7 @@ class Plugin(indigo.PluginBase):
         indigo.PluginBase.__init__(
             self, pluginId, pluginDisplayName, pluginVersion, pluginPrefs)
         self.debug = pluginPrefs.get("showDebugInfo", False)
-        versionFileUrl = "https://raw.github.com/blysik/indigo-heos/VersionInfo.html"
+        versionFileUrl = "https://raw.githubusercontent.com/blysik/indigo-heos/master/VersionInfo.html"
         self.updater = indigoPluginUpdateChecker.updateChecker(self, versionFileUrl)
         self.devices = {}
         self.refresh_speaker_list()

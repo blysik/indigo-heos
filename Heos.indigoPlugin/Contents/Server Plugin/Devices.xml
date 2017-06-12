@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Devices>
+	<Device type="custom" id="HeosSpeaker">
+		<Name>Denon Heos Speaker</Name>
+    <ConfigUI>
+			<Field id="desc-label" type="label">
+				<Label>This will show Heos Speakers on the network.</Label>
+			</Field>
+        <Field id="pid" type="menu">
+				   <Label>Select Heos Speaker:</Label>
+				   <List class="self" method="get_speaker_list" dynamicReload="true" />
+        </Field>
+        <Field id="find-speakers" type="button">
+            <Title>Find Speakers</Title>
+            <CallbackMethod>refresh_speaker_list</CallbackMethod>
+        </Field>
+		</ConfigUI>
+		<States>
+      <State id="ip">
+				<ValueType>String</ValueType>
+				<TriggerLabel>IP Address</TriggerLabel>
+				<ControlPageLabel>IP Address</ControlPageLabel>
+				<ControlPageLabelPrefix>IP Address is</ControlPageLabelPrefix>
+			</State>
+			<State id="volume">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Volume</TriggerLabel>
+				<ControlPageLabel>Volume</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+      <State id="playStatus">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Play State</TriggerLabel>
+				<ControlPageLabel>Play State</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+      <State id="muteStatus">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Mute State</TriggerLabel>
+				<ControlPageLabel>Mute State</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-album">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Album</TriggerLabel>
+				<ControlPageLabel>Album</ControlPageLabel>
+				<ControlPageLabelPrefix>Album is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-artist">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Artist</TriggerLabel>
+				<ControlPageLabel>Artist</ControlPageLabel>
+				<ControlPageLabelPrefix>Artist is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-qid">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>qid</TriggerLabel>
+				<ControlPageLabel>qid</ControlPageLabel>
+				<ControlPageLabelPrefix>qid is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-song">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Song</TriggerLabel>
+				<ControlPageLabel>Song</ControlPageLabel>
+				<ControlPageLabelPrefix>Song is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-album_id">
+				<ValueType>String</ValueType>
+				<TriggerLabel>album_id</TriggerLabel>
+				<ControlPageLabel>album_id</ControlPageLabel>
+				<ControlPageLabelPrefix>album_id is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-mid">
+				<ValueType>String</ValueType>
+				<TriggerLabel>mid</TriggerLabel>
+				<ControlPageLabel>mid</ControlPageLabel>
+				<ControlPageLabelPrefix>mid is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-station">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Station</TriggerLabel>
+				<ControlPageLabel>Station</ControlPageLabel>
+				<ControlPageLabelPrefix>Station is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-image_url">
+				<ValueType>String</ValueType>
+				<TriggerLabel>image_url</TriggerLabel>
+				<ControlPageLabel>image_url</ControlPageLabel>
+				<ControlPageLabelPrefix>image_url is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-sid">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>sid</TriggerLabel>
+				<ControlPageLabel>sid</ControlPageLabel>
+				<ControlPageLabelPrefix>sid is</ControlPageLabelPrefix>
+			</State>
+      <State id="media-type">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Type</TriggerLabel>
+				<ControlPageLabel>Type</ControlPageLabel>
+				<ControlPageLabelPrefix>Type is</ControlPageLabelPrefix>
+			</State>
+		</States>
+    <UiDisplayStateId>playStatus</UiDisplayStateId>
+	</Device>
+</Devices>

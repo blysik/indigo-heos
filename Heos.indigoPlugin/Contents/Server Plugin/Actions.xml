@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Actions>
+	<Action id="actionPlay" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Play</Name>
+		<CallbackMethod>actionPlay</CallbackMethod>
+	</Action>
+	<Action id="actionPause" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Pause</Name>
+		<CallbackMethod>actionPause</CallbackMethod>
+	</Action>
+  <Action id="toggleMute" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Toggle Mute</Name>
+		<CallbackMethod>toggleMute</CallbackMethod>
+	</Action>
+	<Action id="actionStop" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Stop</Name>
+		<CallbackMethod>actionStop</CallbackMethod>
+	</Action>
+	<Action id="setVolume" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Volume</Name>
+		<CallbackMethod>setVolume</CallbackMethod>
+		<ConfigUI>
+			<Field id="txtvolume" type="textfield">
+				<Label>Level (0-100):</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+  <Action id="playInputOther" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Play Input From Other Speaker</Name>
+		<CallbackMethod>playInputOther</CallbackMethod>
+		<ConfigUI>
+      <Field id="txtspid" type="menu">
+         <Label>Select Heos Speaker to play Source From:</Label>
+         <List class="self" method="get_speaker_list" dynamicReload="true" />
+      </Field>
+      <Field id="find-speakers" type="button">
+          <Title>Find Speakers</Title>
+          <CallbackMethod>refresh_speaker_list</CallbackMethod>
+      </Field>
+      <Field id="txtinput" type="textfield">
+				<Label>Input name (ex: inputs/optical_in_1):</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="actionVolumeDown" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Volume Down</Name>
+		<CallbackMethod>actionVolumeDown</CallbackMethod>
+	</Action>
+	<Action id="actionVolumeUp" deviceFilter="self" uiPath="DeviceActions">
+		<Name>Heos: Volume Up</Name>
+		<CallbackMethod>actionVolumeUp</CallbackMethod>
+	</Action>
+</Actions>

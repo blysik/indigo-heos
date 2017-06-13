@@ -153,9 +153,7 @@ class Plugin(indigo.PluginBase):
         return dialog_list
 
     def speakerSelected(self, valuesDict, typeId, devId):
-        devTup = self.devices.get(devId, None)
-        dev = devTup[0]
-        self.selectedSpeaker = str(dev.pluginProps['pid'])
+        self.selectedSpeaker = valuesDict['txtspid']
 
     def get_input_list(self, filter="", valuesDict=None, typeId="", targetId=0):
         try:

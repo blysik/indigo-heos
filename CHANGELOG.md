@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.3]
+### Fixed
+- "Play Input From Other Speaker": was incorrectly using inputs of playing device,
+rather than other speaker
+
 ## [0.0.2]
 ### Changed
 - "Play Input From Other Speaker" now generates a list of inputs to select,

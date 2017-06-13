@@ -21,7 +21,8 @@ class Plugin(indigo.PluginBase):
             self, pluginId, pluginDisplayName, pluginVersion, pluginPrefs)
         self.debug = pluginPrefs.get("showDebugInfo", False)
         versionFileUrl = "https://raw.githubusercontent.com/blysik/indigo-heos/master/VersionInfo.html"
-        self.updater = indigoPluginUpdateChecker.updateChecker(self, versionFileUrl)
+        self.updater = indigoPluginUpdateChecker.updateChecker(
+            self, versionFileUrl)
         self.devices = {}
         self.refresh_speaker_list()
 
@@ -150,6 +151,26 @@ class Plugin(indigo.PluginBase):
         for i in self.speakers:
             dialog_list.append([str(i['pid']), i['name']])
         return dialog_list
+
+    def speakerSelected(self, valuesDict, typeId, devId):
+        devTup = self.devices.get(devId, None)
+        dev = devTup[0]
+        self.selectedSpeaker = str(dev.pluginProps['pid'])
+
+    def get_input_list(self, filter="", valuesDict=None, typeId="", targetId=0):
+        try:
+            self.selectedSpeaker
+        except AttributeError:
+            self.logger.debug("self.selectedSpeaker is not set, trying again")
+        else:
+            self.logger.debug("Generating speaker input list")
+            heos_object = heos.Heos(verbose=False)
+            inputs_list = []
+            inputs_reply = heos_object.get_browse_source(self.selectedSpeaker)
+            self.logger.debug(inputs_reply)
+            for i in inputs_reply:
+                inputs_list.append([i['mid'], i['name']])
+            return inputs_list
 
     ##########################################################################
     # Action Menthods

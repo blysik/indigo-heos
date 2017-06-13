@@ -133,7 +133,7 @@ class Plugin(indigo.PluginBase):
             elif gps == 'pause':
                 dev.updateStateImageOnServer(indigo.kStateImageSel.AvPaused)
 
-    def refresh_speaker_list(self):
+    def refresh_speaker_list(self, filter="", valuesDict=None, typeId="", targetId=0):
         heos_object = heos.Heos(verbose=False)
         self.speakers = heos_object.get_players()
         self.logger.debug("speakers list: %s" % unicode(self.speakers))
@@ -160,6 +160,7 @@ class Plugin(indigo.PluginBase):
             self.selectedSpeaker
         except AttributeError:
             self.logger.debug("self.selectedSpeaker is not set, trying again")
+            return []
         else:
             self.logger.debug("Generating speaker input list")
             heos_object = heos.Heos(verbose=False)

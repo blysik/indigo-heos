@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.4]
+### Fixed
+- Fix "TypeError: refresh_speaker_list() takes exactly 1 argument (4 given)"
+- Fix "TypeError: Expecting an object of type list; got an object of type NoneType instead"
+
 ## [0.0.3]
 ### Fixed
 - "Play Input From Other Speaker": was incorrectly using inputs of playing device,

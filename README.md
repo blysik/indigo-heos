@@ -20,7 +20,7 @@ specific actions available.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/blysik/indigo-heos/tags).
+We *will* use [SemVer](http://semver.org/) for versioning, once we get to a feature set that I consider a 1.0.0 release. For the versions available, see the [tags on this repository](https://github.com/blysik/indigo-heos/tags).
 
 ## Authors
 

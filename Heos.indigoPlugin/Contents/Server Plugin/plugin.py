@@ -6,6 +6,7 @@
 import os
 import sys
 import re
+import traceback
 import indigo
 import indigoPluginUpdateChecker
 sys.path.append('./lib')

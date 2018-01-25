@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - Updated CHANGELOG.md formatting
+- Added 'import traceback' to plugin.py
 
 ## [0.0.4]
 ### Fixed

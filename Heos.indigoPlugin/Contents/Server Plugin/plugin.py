@@ -110,6 +110,7 @@ class Plugin(indigo.PluginBase):
             elif gps == 'pause':
                 p_gps = 'paused'
             else:
+                self.logger.debug("unknown play state: %s" % unicode(gps))
                 p_gps = 'unknown'
             gms = heos_obj.get_mute_state()
             gv = heos_obj.get_volume()

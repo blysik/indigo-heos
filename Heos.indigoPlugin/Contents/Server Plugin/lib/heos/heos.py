@@ -96,7 +96,6 @@ class Heos(object):
                     return self._parse_message(data['heos']['message'])
                 else:
                     raise HeosException('No message or payload in reply.')
-
         # pylint: disable=bare-except
         except:
             pass

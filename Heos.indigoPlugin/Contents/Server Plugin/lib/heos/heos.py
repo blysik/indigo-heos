@@ -90,8 +90,13 @@ class Heos(object):
                     raise HeosException(data['heos']['message'])
                 if 'payload' in data.keys():
                     return data['payload']
-                else:
+                elif 'message' in data['heos'].keys():
+                    if data['heos']['message'] == 'command under process':
+                        return None
                     return self._parse_message(data['heos']['message'])
+                else:
+                    raise HeosException('No message or payload in reply.')
+
         # pylint: disable=bare-except
         except:
             pass

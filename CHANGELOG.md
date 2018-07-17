@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updated CHANGELOG.md formatting
 - Added 'import traceback' to plugin.py
 - Account for an unknown play status from a device
+- Added socket timeout handling for heos.py lib
 
 ## [0.0.4]
 ### Fixed

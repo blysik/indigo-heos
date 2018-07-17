@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Updated CHANGELOG.md formatting
 - Added 'import traceback' to plugin.py
+- Account for an unknown play status from a device
 
 ## [0.0.4]
 ### Fixed

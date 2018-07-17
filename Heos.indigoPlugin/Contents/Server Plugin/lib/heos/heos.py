@@ -101,7 +101,11 @@ class Heos(object):
     def _recv_reply(self, command):
         " recv reply "
         while True:
-            msg = self._connection.recv(64 * 1024)
+            try:
+                msg = self._connection.recv(64 * 1024)
+            except socket.timeout, e:
+                if self._verbose:
+                    print "Timeout receiving data: %s" % e
             if self._verbose:
                 pprint(msg)
                 pprint(msg.decode('ascii'))

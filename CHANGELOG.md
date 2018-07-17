@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unrelease]
+### Fixed
+- Added logic to detect 'command under process' message
+
 ## [0.0.5]
 ### Fixed
 - Updated CHANGELOG.md formatting

@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - Added logic to detect 'command under process' message
+- Added Heos icon for Indigo Plugin Store
 
 ## [0.0.5]
 ### Fixed

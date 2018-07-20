@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.0.6]
 ### Fixed
 - Added logic to detect 'command under process' message
 - Added Heos icon for Indigo Plugin Store
@@ -39,7 +41,8 @@ rather than using a text input field
 ### Added
 - Initial version
 
-[Unreleased]: https://github.com/blysik/indigo-heos/compare/0.0.5...HEAD
+[Unreleased]: https://github.com/blysik/indigo-heos/compare/0.0.6...HEAD
+[0.0.6]: https://github.com/blysik/indigo-heos/compare/0.0.5...0.0.6
 [0.0.5]: https://github.com/blysik/indigo-heos/compare/0.0.4...0.0.5
 [0.0.4]: https://github.com/blysik/indigo-heos/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/blysik/indigo-heos/compare/0.0.2...0.0.3

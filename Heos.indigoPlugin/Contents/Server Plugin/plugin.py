@@ -115,7 +115,7 @@ class Plugin(indigo.PluginBase):
             gms = heos_obj.get_mute_state()
             gv = heos_obj.get_volume()
             media = heos_obj.get_now_playing_media()
-            self.logger.debug("get_now_playing_media: %s" % unicode(media))
+            # self.logger.debug("get_now_playing_media: %s" % unicode(media))
             state_list = [
                 {"key": "volume", "value": gv},
                 {"key": "playStatus", "value": p_gps},

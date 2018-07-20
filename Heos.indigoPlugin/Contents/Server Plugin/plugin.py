@@ -115,19 +115,20 @@ class Plugin(indigo.PluginBase):
             gms = heos_obj.get_mute_state()
             gv = heos_obj.get_volume()
             media = heos_obj.get_now_playing_media()
+            self.logger.debug("get_now_playing_media: %s" % unicode(media))
             state_list = [
                 {"key": "volume", "value": gv},
                 {"key": "playStatus", "value": p_gps},
                 {"key": "muteStatus", "value": gms},
-                {"key": "media-album", "value": media['album']},
-                {"key": "media-artist", "value": media['artist']},
-                {"key": "media-qid", "value": media['qid']},
-                {"key": "media-song", "value": media['song']},
-                {"key": "media-album_id", "value": media['album_id']},
-                {"key": "media-station", "value": media['station']},
-                {"key": "media-image_url", "value": media['image_url']},
-                {"key": "media-sid", "value": media['sid']},
-                {"key": "media-type", "value": media['type']}
+                {"key": "media-album", "value": media.get('album', 'unknown')},
+                {"key": "media-artist", "value": media.get('artist', 'unknown')},
+                {"key": "media-qid", "value": media.get('qid', 'unknown')},
+                {"key": "media-song", "value": media.get('song', 'unknown')},
+                {"key": "media-album_id", "value": media.get('album_id', 'unknown')},
+                {"key": "media-station", "value": media.get('station', 'unknown')},
+                {"key": "media-image_url", "value": media.get('image_url', 'unknown')},
+                {"key": "media-sid", "value": media.get('sid', 'unknown')},
+                {"key": "media-type", "value": media.get('type', 'unknown')}
             ]
             dev.updateStatesOnServer(state_list)
             if gps == 'play':
